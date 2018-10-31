@@ -1,0 +1,15 @@
+[Unit]
+Description=File switcher - switch file content based on pin state
+After=syslog.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/switcher/switcher.py
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
